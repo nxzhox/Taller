@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+    <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">        
+        <title>
+            
+        </title>
+  
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Administrativo',    {{lista[0]}}],
+          ['Auxiliar',       {{lista[1]}}],
+          ['Profesional',   {{lista[2]}}],
+          ['Técnico',  {{lista[3]}}],
+          ['Directivo',  {{lista[4]}}],
+          ['Chofer',  {{lista[5]}}],
+          ['Jefatura ',  {{lista[6]}}],
+          ['Alcalde',  {{lista[7]}}],
+          ['Sin Estamento',    {{lista[8]}}]
+        ]);
+
+        var options = {
+          title: 'Estamento'
+        };
+          
+          
+        
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+          
+          
+         var data2 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Grado 13',    {{lista2[0]}}],
+          ['Grado 18',      {{lista2[1]}}],
+          ['Grado 14',  {{lista2[2]}}],
+          ['Grado 12', {{lista2[3]}}],
+          ['Grado 10', {{lista2[4]}}],
+          ['Grado 15', {{lista2[5]}}],
+          ['Grado 6', {{lista2[6]}}],
+          ['Grado 11', {{lista2[7]}}],
+          ['Grado 16', {{lista2[8]}}],
+          ['Grado 8', {{lista2[9]}}],
+          ['Grado 9', {{lista2[10]}}],
+          ['Grado 7', {{lista2[11]}}],
+          ['Grado 17', {{lista2[12]}}],
+          ['Grado 4', {{lista2[13]}}],
+          ['Grado 21', {{lista2[14]}}],
+          ['Grado 5', {{lista2[15]}}],
+          ['Grado 19', {{lista2[16]}}],
+          ['Grado 99', {{lista2[17]}}],
+          ['Grado 2',    {{lista2[18]}}]
+        ]);
+
+        var options2 = {
+          title: 'Grado'
+        };
+
+        var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+        chart2.draw(data2, options2); 
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+         
+                
+          
+          
+      }
+        
+        
+             
+          
+          
+      
+        
+        
+       
+       
+      
+       
+        
+    </script>     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    </head>
+<body>
+
+ 
+  <div class="row">
+      <div class="col-sm">
+      
+  <img src="{{ url_for ('static', filename='images/bio3.jpg ')}}" class="img-fluid" alt="Responsive image"height: auto;>
+  
+        </div>
+  </div>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-success">
+   <a class="navbar-brand" href="Main">Resumen</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Municipalidad
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="Mun1">Municipalidad 1</a>
+          <a class="dropdown-item" href="Mun2">Municipalidad 2</a>
+          <a class="dropdown-item" href="Mun3">Municipalidad 3</a>
+            <a class="dropdown-item" href="Mun4">Municipalidad 4</a>
+            <a class="dropdown-item" href="Mun5">Municipalidad 5</a>
+            <a class="dropdown-item" href="Mun6">Municipalidad 6</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Info">Acerca De <span class="sr-only">(current)</span></a>
+      </li>
+      
+       
+        
+        
+        
+      
+    </ul>
+  </div>
+    
+</nav>
+    
+<center>
+ <div class="col-sm">
+  <h1> Proyecto Municipalidades de la Region del Bio Bio </h1>
+     <h2> Junio 2020 </h2>
+    </div>
+    
+    
+  <div class="col-sm">
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+    </div>
+    
+    
+  <div class="col-sm">
+      <div id="piechart2" style="width: 900px; height: 500px;"></div>
+    </div>
+    
+    
+  <div class="col-sm bg-success" height: auto; >
+    
+    <center> <h2 class="text-white"> Derechos Reservados </h2>
+      
+          
+     </div>
+    
+
+  
+  
+  
+ 
+
+    
+
+
+   
+       
+        
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+    
+</html>
